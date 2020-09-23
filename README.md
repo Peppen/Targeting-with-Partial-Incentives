@@ -19,4 +19,4 @@ Si utilizza un modello di attivazione con threshold; dato un grafo non direziona
 ### Risultati
 I risultati ottenuti vengono rappresentati mediante i seguenti grafici. Sulle ascisse sono riportati i valori di trheshold utilizzati, mentre sulle ordinate è riportata la size
 delle soluzioni trovate dall’algoritmo. In Figura 1 è mostrata l’esecuzione dell’algoritmo, dopo aver applicato il principio di decisione differita al grafo, utilizzando thresholds costanti per tutti i nodi. In particolare, si è partiti assegnando ad ogni nodo una threshold pari a 1, e successivamente si è incrementata la threshold ad ogni esecuzione. Dato il gran numero di nodi e archi, l’incremento avviene con uno step pari a 2, e ci si è fermati al valore 11, che corrisponde al grado medio.
-<img src="constant_plot.png" align="center" Hspace="15" Vspace="0" width=300 height=300 Border="0">
+<img src="constant_plot.png" align="center" Hspace="15" Vspace="0" width=500 height=500 Border="0">
