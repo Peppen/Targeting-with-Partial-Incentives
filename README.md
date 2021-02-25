@@ -1,6 +1,5 @@
 # Targeting with Partial Incentives
-<img src="https://evanemolo.com/assets/images/algorithms/graphs/nodes-edges.png" align="right" Hspace="15" Vspace="0" width=300 height=300
-Border="0">
+<img src="https://evanemolo.com/assets/images/algorithms/graphs/nodes-edges.png" align="right" Hspace="15" Vspace="0" width=300 height=300 Border="0">
 Data una rete sociale rappresentata da grafo G = (V,E), dove V è l'insieme dei nodi
 della rete, E è l'insieme degli archi che rappresentano i collegamenti tra i nodi della rete, ed una threshod function t: V → N dove t(v) indica il numero di adiacenti
 attivi del nodo v necessari ad attivare v, si vuole trovare un insieme di nodi che sia in grado di influenzare l'intera rete.
@@ -20,16 +19,19 @@ Il progetto è quindi suddiviso in 3 file:
 * [TPI.py](https://github.com/Peppen/Targeting-with-Partial-Incentives/blob/master/TPI.py) contenente l'implementazione dell'algoritmo TPI.
 * [deferred_decision.py](https://github.com/Peppen/Targeting-with-Partial-Incentives/blob/master/deferred_decision.py) che implementa il processo di decisione differita. Per le probabilità è possibile scegliere tra *distribuzione uniforme* e *distribuzione normale*. 
 * [main.py](https://github.com/Peppen/Targeting-with-Partial-Incentives/blob/master/main.py) che implementa l'esecuzione dell'algoritmo e la generazione dei grafi.
+* 
 ## Risultati
 I risultati ottenuti vengono rappresentati mediante i seguenti grafici. Sulle ascisse sono riportati i valori di trheshold utilizzati, mentre sulle ordinate è riportata la size
 delle soluzioni trovate dall’algoritmo. In entrambi i casi vengono mostrate i risultati utilizzando sia la distribuzione uniforme che la distribuzione normale per la generazione delle probabilità assegnateagli archi. Per quanto riguarda *thresholds costanti* la size aumenta linearmente, con *thresholds proporzionali* abbiamo un salto, le size sono già alte a valori bassi per le threshold.
 
+
 ## Thresholds Costanti
-<img src="constant_plot.png" align="right" Hspace="15" Vspace="0" width=190 height=190 Border="0">
+<img src="constant_plot.png" align="right" Hspace="15" Vspace="0" width=195 height=195 Border="0">
 In Figura 1 è mostrata l’esecuzione dell’algoritmo, dopo aver applicato il principio di decisione differita al grafo, utilizzando thresholds costanti per tutti i nodi. In particolare, si è partiti assegnando ad ogni nodo una threshold pari a 1, e successivamente si è incrementata la threshold ad ogni esecuzione. Dato il gran numero di nodi e archi, l’incremento avviene con uno step pari a 2, e ci si è fermati al valore 11, che corrisponde al grado medio.
 
+
 ## Thresholds Proporzionali
-<img src="degree_proportional_plot.png" align="right" Hspace="15" Vspace="0" width=190 height=190 Border="0">
+<img src="degree_proportional_plot.png" align="right" Hspace="15" Vspace="0" width=195 height=195 Border="0">
 In Figura 2 è invece mostrata l’esecuzione dell’algoritmo utilizzando thresholds proporzionali al grado del nodo. La strategia di esecuzione è la stessa, ma le threshold stavolta sono calcolate tenendo in considerazione il grado del nodo: *t(v)* = *(deg(v) * i)*/ *iter* dove, *t(v)* è la threshold assegnata al nodo *v*, *dev(v)* è il grado del nodo, *i* è l’iterazione attuale, *iter* è il numero di iterazioni totali (ovvero, il grado medio).
 
 
