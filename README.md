@@ -26,7 +26,7 @@ I risultati ottenuti vengono rappresentati mediante i seguenti grafici. Sulle as
 delle soluzioni trovate dall’algoritmo. In Figura 1 è mostrata l’esecuzione dell’algoritmo, dopo aver applicato il principio di decisione differita al grafo, utilizzando thresholds costanti per tutti i nodi. In particolare, si è partiti assegnando ad ogni nodo una threshold pari a 1, e successivamente si è incrementata la threshold ad ogni esecuzione. Dato il gran numero di nodi e archi, l’incremento avviene con uno step pari a 2, e ci si è fermati al valore 11, che corrisponde al grado medio.
 
 <br>
-<img src="degree_proportional_plot.png" align="right" Hspace="250" Vspace="5" width=300 height=300 Border="0">
+<img src="degree_proportional_plot.png" align="right" Hspace="15" Vspace="0" width=300 height=300 Border="0">
 In Figura 2 è invece mostrata l’esecuzione dell’algoritmo utilizzando thresholds proporzionali al grado del nodo. La strategia di esecuzione è la stessa, ma le threshold stavolta sono calcolate tenendo in considerazione il grado del nodo: *t(v)* = *(deg(v) * i)*/ *iter* dove, *t(v)* è la threshold assegnata al nodo *v*, *dev(v)* è il grado del nodo, *i* è l’iterazione attuale, *iter* è il numero di iterazioni totali (ovvero, il grado medio).
 
 
