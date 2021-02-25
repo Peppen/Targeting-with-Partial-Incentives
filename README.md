@@ -28,7 +28,7 @@ In Figura 1 è mostrata l’esecuzione dell’algoritmo, dopo aver applicato il 
 
 
 ## Thresholds Proporzionali
-<img src="degree_proportional_plot.png" align="right" Hspace="15" Vspace="0" width=200 height=200 Border="0">
+<img src="degree_proportional_plot.png" align="right" Hspace="15" Vspace="5" width= height=200 Border="0">
 In Figura 2 è invece mostrata l’esecuzione dell’algoritmo utilizzando thresholds proporzionali al grado del nodo. La strategia di esecuzione è la stessa, ma le threshold stavolta sono calcolate tenendo in considerazione il grado del nodo: *t(v)* = *(deg(v) * i)*/ *iter* dove, *t(v)* è la threshold assegnata al nodo *v*, *dev(v)* è il grado del nodo, *i* è l’iterazione attuale, *iter* è il numero di iterazioni totali (ovvero, il grado medio).
 
 ## Risultati
