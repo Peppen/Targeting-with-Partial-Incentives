@@ -15,6 +15,7 @@ L'algoritmo presentato è stato implementato utilizzando Python 3.6 e la libreri
 Si utilizza un modello di attivazione con threshold; dato un grafo non direzionato G = (V,E), una threshold function *t* : V → N e una distribuzione di probabilità associata agli archi di G, *p* : E → [0,1]:
 * Applicare il *principio di decisione differita*: per ogni arco *e* del grafo viene generato un numero pseudocasuale *x* compreso tra 0 e 1. Se *x* < *p(e)* (cioè il nodo infetta con una probabilità inferiore rispetto a quella richiesta), allora l'arco *e* viene rimosso dal grafo.
 * Eseguire l'algoritmo sul grafo ottenuto: il grafo è dato in input all'algoritmo che calcola la soluzione. Questa procedura è iterata 10 volte, poi viene calcolata la dimensione media delle soluzione ottenute.
+* 
 Il progetto è quindi suddiviso in 3 file:
 * [TPI.py](https://github.com/Peppen/Targeting-with-Partial-Incentives/blob/master/TPI.py) contenente l'implementazione dell'algoritmo TPI.
 * [deferred_decision.py](https://github.com/Peppen/Targeting-with-Partial-Incentives/blob/master/deferred_decision.py) che implementa il processo di decisione differita. Per le probabilità è possibile scegliere tra *distribuzione uniforme* e *distribuzione normale*. 
@@ -23,7 +24,7 @@ Il progetto è quindi suddiviso in 3 file:
 I risultati ottenuti vengono rappresentati mediante i seguenti grafici. Sulle ascisse sono riportati i valori di trheshold utilizzati, mentre sulle ordinate è riportata la size
 delle soluzioni trovate dall’algoritmo. In Figura 1 è mostrata l’esecuzione dell’algoritmo, dopo aver applicato il principio di decisione differita al grafo, utilizzando thresholds costanti per tutti i nodi. In particolare, si è partiti assegnando ad ogni nodo una threshold pari a 1, e successivamente si è incrementata la threshold ad ogni esecuzione. Dato il gran numero di nodi e archi, l’incremento avviene con uno step pari a 2, e ci si è fermati al valore 11, che corrisponde al grado medio.
 <img src="constant_plot.png" align="center" Hspace="250" Vspace="5" width=400 height=400 Border="0">
-
+<br>
 In Figura 2 è invece mostrata l’esecuzione dell’algoritmo utilizzando thresholds proporzionali al grado del nodo. La strategia di esecuzione è la stessa, ma le threshold stavolta sono calcolate tenendo in considerazione il grado del nodo: *t(v)* = *(deg(v) * i)*/ *iter* dove, *t(v)* è la threshold assegnata al nodo *v*, *dev(v)* è il grado del nodo, *i* è l’iterazione attuale, *iter* è il numero di iterazioni totali (ovvero, il grado medio).
 <img src="degree_proportional_plot.png" align="center" Hspace="250" Vspace="5" width=400 height=400 Border="0">
 
